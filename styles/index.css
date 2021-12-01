@@ -1,0 +1,244 @@
+
+body {
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    text-align-last: center;
+}
+a {
+    text-decoration: none !important;
+}
+
+nav {
+    background-color: #0055b8 !important;
+    padding: 30px;
+}
+
+.nav-item, .nav-link {
+    color: white !important;    
+    text-decoration: none;
+    font-weight: 600; 
+    font-size: 16px !important;
+}
+
+.nav-link:hover {
+    color: rgb(152, 245, 143) !important;
+}
+
+.header {
+    margin-top: 15%;
+    box-shadow: 1px 1px 5px #0055b8;
+    padding: 80px;
+    background-color: #f7fbffbe !important;
+}
+
+.header > h1 {
+    font-size: 60px;
+    text-align: center;
+    padding-bottom: 20px;text-transform: uppercase;
+}
+
+.header-login {
+    margin-top: 10%;
+    min-height: 500px;
+    box-shadow: 1px 1px 5px #0055b8;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+    background-color: #f7fbffbe !important;
+} 
+
+.header-login > h1 {
+    font-size: 60px;
+    text-align: center;
+    padding-bottom: 20px;text-transform: uppercase;
+} 
+
+.header-login > .btn-regis > a {
+    color: #fff;
+} 
+
+.header-login > .btn-regis:hover {
+    background-color: #d63946;
+} 
+
+.header > p {
+    font-size: 22px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn-return {
+    background-color: #d63946;
+    float: right;width: 100px;
+}
+
+.btn-return:hover {
+    background-color: #0055b8;
+}
+
+.btn-return > a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-request {
+    background-color: #2876cf;
+    float: right;margin-right: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-request:hover {
+    background-color: #0055b8;
+}
+
+.btn-login {
+    background-color: rgb(152, 245, 143);
+    min-width: 100px;  
+}
+
+.btn-login:hover {
+    background-color: #2876cf;
+    min-width: 100px;  
+}
+
+.btn-login > a {
+    color: #131313 !important;
+    font-weight: 600;
+}
+
+.btn-register {
+    background-color: #ce4954;
+    margin: 10px;
+    min-width: 100px;  
+}
+
+.btn-register:hover {
+    background-color: #0055b8;
+    margin: 10px;
+    min-width: 100px;  
+}
+
+.btn-register > a {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.btn-cancel {
+    background-color: #d63946;
+    margin: 10px;
+    min-width: 100px;  
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.btn-cancel:hover {
+    background-color: #0055b8;
+    margin: 10px;
+    min-width: 100px;  
+}
+
+.btn-regis {
+    background-color: #0055b8;
+    margin: 10px;
+    min-width: 100px;  
+    font-weight: 600;
+    color: #fff !important;
+}
+
+.btn-regis:hover {
+    background-color: rgb(152, 245, 143);
+    color: #131313 !important;
+    margin: 10px;
+    min-width: 100px;  
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0055b8 !important;
+    color: white;
+    text-align: center; 
+    font-size: 16px;
+    padding: 15px;
+    font-weight: 600;
+}
+
+form {
+    padding: 40px; 
+    margin: 50px;
+    top: 0;
+    bottom: 0;
+    text-align-last: center;
+}
+
+.hint-text {
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: -40px;
+    padding: 10px;
+}
+
+.form-header {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.form-row {
+    margin: 10px;
+}
+
+#login-form {
+    margin-top: 8%;
+}
+
+.alert-danger {
+    margin-left: -40px;
+    border-radius: 5px 5px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.form-label {
+    float: right;
+    margin-right: 5px;
+    font-weight: 600;border-radius: 3px 3px;
+}
+
+.form-control, .form-select{
+    width: 400px; 
+}
+
+.form-check {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;    
+    padding-right: 30px !important;
+}
+
+.form-check-label {
+    margin-top: -20px !important; 
+}
+
+.center {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.centerr {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.list {
+    font-weight: 600;
+    line-height: 30px;
+}
