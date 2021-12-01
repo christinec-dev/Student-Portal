@@ -1,6 +1,6 @@
 <?php
 // Makes connection to our database
-$con = mysqli_connect('localhost', 'root', '','student_table');
+$con = mysqli_connect('localhost', 'root', '','xyz_database');
 // Checks connection for error
 if (mysqli_connect_errno())
 {

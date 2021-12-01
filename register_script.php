@@ -3,8 +3,8 @@
 /**** Christine Coomans ****/
 /**** https://github.com/christinec-dev *******/
 
-// Creates a database connection to student_table
-$con = mysqli_connect('localhost', 'root', '','student_table');
+// Creates a database connection to xyz_database
+$con = mysqli_connect('localhost', 'root', '','xyz_database');
 
 // Gets the post field records from our form
 $username = $_POST['username'];
@@ -25,8 +25,8 @@ $uuid = bin2hex(random_bytes(4));
 $data = $_POST;
 
 //Validate that the username and email is unique and not taken by existing students
-$sql_u = "SELECT * FROM registration_table WHERE username='$username'";
-$sql_e = "SELECT * FROM registration_table WHERE email='$email'";
+$sql_u = "SELECT * FROM xyz_students WHERE username='$username'";
+$sql_e = "SELECT * FROM xyz_students WHERE email='$email'";
 $res_u = mysqli_query($con, $sql_u);
 $res_e = mysqli_query($con, $sql_e);
 
@@ -59,9 +59,9 @@ if (mysqli_num_rows($res_u) > 0) {
 // if email is taken, stop user from registering
 else if (mysqli_num_rows($res_e) > 0) {
     echo '<script>alert("Email user already exists. Please try again");window.location.href = "register.php";</script>';
-// Database INSERT SQL Code to add data to our registration_table table if email && username is unique
+// Database INSERT SQL Code to add data to our xyz_students table if email && username is unique
 } else {
-    $sql = "INSERT INTO `registration_table`(`STID`, `USERNAME`, `PASSWORD`, `CONFIRM_PASSWORD`, `FIRSTNAME`, `SURNAME`, `EMAIL`, `QUALIFICATION`, `CELL_NUMBER`, `GENDER`, `NATIONALITY`) VALUES ('$uuid', '$username', '$password', '$confirm', '$firstname', '$surname', '$email', '$qualification', '$cell', '$gender', '$nationality')";
+    $sql = "INSERT INTO `xyz_students`(`STID`, `USERNAME`, `PASSWORD`, `CONFIRM_PASSWORD`, `FIRSTNAME`, `SURNAME`, `EMAIL`, `QUALIFICATION`, `CELL_NUMBER`, `GENDER`, `NATIONALITY`) VALUES ('$uuid', '$username', '$password', '$confirm', '$firstname', '$surname', '$email', '$qualification', '$cell', '$gender', '$nationality')";
 }
 
 // Inserts into database 

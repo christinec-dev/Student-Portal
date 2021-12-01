@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
 	$ip_address=getIpAddr();
 
     // Gets the total amount of attempts(counts) for user IP Address
-	$query=mysqli_query($con,"SELECT count(*) AS total_count FROM log_table WHERE TRYTIME > $time AND IPADDRESS = '$ip_address'");
+	$query=mysqli_query($con,"SELECT count(*) AS total_count FROM xyz_log_history WHERE TRYTIME > $time AND IPADDRESS = '$ip_address'");
     $check_login_row=mysqli_fetch_assoc($query);
 	$total_count=$check_login_row['total_count'];
     
@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
     $password=$_POST['password'];
     
     // Selects the post field records from our table and validates if correct details		
-    $res=mysqli_query($con, "SELECT * FROM `registration_table` WHERE `USERNAME` = '$username' AND `PASSWORD` = '$password'");
+    $res=mysqli_query($con, "SELECT * FROM `xyz_students` WHERE `USERNAME` = '$username' AND `PASSWORD` = '$password'");
 
         // Logs user in and clears IP ADDRESS attempts from log  
         if(mysqli_num_rows($res)){
@@ -52,7 +52,7 @@ if(isset($_POST['submit'])){
                 echo "Cookies Not Set";
             }
 
-			mysqli_query($con,"delete from log_table where IPADDRESS='$ip_address'");
+			mysqli_query($con,"delete from xyz_log_history where IPADDRESS='$ip_address'");
             //takes us to dashboard
             echo "<script>window.location.href='dashboard.php';</script>";
         // Increases attempt count and displays remaining attempts as message
@@ -68,7 +68,7 @@ if(isset($_POST['submit'])){
 			}
             // Captures time tried to log in to log database
 			$try_time=time();
-			mysqli_query($con,"insert into log_table(IPADDRESS,TRYTIME) values('$ip_address','$try_time')");
+			mysqli_query($con,"insert into xyz_log_history(IPADDRESS,TRYTIME) values('$ip_address','$try_time')");
 		}
 	}
 }

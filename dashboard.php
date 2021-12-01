@@ -14,16 +14,16 @@ if(!isset($_SESSION['IS_LOGIN'])){
     //set session "id" as username
     $username=$_SESSION['username'];
     
-    //selects everything from registration_table table that is relevant to the username's row
-    $query=mysqli_query($con,"SELECT * FROM `registration_table` WHERE username='$username'");
+    //selects everything from xyz_students table that is relevant to the username's row
+    $query=mysqli_query($con,"SELECT * FROM `xyz_students` WHERE username='$username'");
     //will fetch the student id and firstname from respective row
     while($row = mysqli_fetch_row($query)) {
         $stid = $row[0];
         $firstname = $row[4];
     }
     
-    //selects everything from person_info table
-    $queryTwo=mysqli_query($con,"SELECT * FROM `person_info`");
+    //selects everything from xyz_account table
+    $queryTwo=mysqli_query($con,"SELECT * FROM `xyz_account`");
     //will return the balance, due date and attendance per row
     while($row = mysqli_fetch_row($queryTwo)) {
         $balance = $row[0];
@@ -31,40 +31,40 @@ if(!isset($_SESSION['IS_LOGIN'])){
         $attendance = $row[2];
     }
 
-    //will get the first module from the results_table table
-    $moduleOne=mysqli_query($con,"SELECT * FROM `results_table` LIMIT 1");
+    //will get the first module from the xyz_results table
+    $moduleOne=mysqli_query($con,"SELECT * FROM `xyz_results` LIMIT 1");
     //will return the module name and result
     while($row = mysqli_fetch_row($moduleOne)) {
        $s1 = $row[0];
        $m1 = $row[1];
     }
 
-    //will get the second module from the results_table table
-    $moduleTwo=mysqli_query($con,"SELECT * FROM `results_table` LIMIT 2");
+    //will get the second module from the xyz_results table
+    $moduleTwo=mysqli_query($con,"SELECT * FROM `xyz_results` LIMIT 2");
     //will return the module name and result
     while($row = mysqli_fetch_row($moduleTwo)) {
        $s2 = $row[0];
        $m2 = $row[1];
     }
 
-    //will get the third module from the results_table table
-    $moduleThree=mysqli_query($con,"SELECT * FROM `results_table` LIMIT 3");
+    //will get the third module from the xyz_results table
+    $moduleThree=mysqli_query($con,"SELECT * FROM `xyz_results` LIMIT 3");
     //will return the module name and result
     while($row = mysqli_fetch_row($moduleThree)) {
        $s3 = $row[0];
        $m3 = $row[1];
     }
     
-    //will get the fourth module from the results_table table
-    $moduleFour=mysqli_query($con,"SELECT * FROM `results_table` LIMIT 4");
+    //will get the fourth module from the xyz_results table
+    $moduleFour=mysqli_query($con,"SELECT * FROM `xyz_results` LIMIT 4");
     //will return the module name and result
     while($row = mysqli_fetch_row($moduleFour)) {
        $s4 = $row[0];
        $m4 = $row[1];
     }
 
-    //will get the fifth module from the results_table table
-    $moduleFive=mysqli_query($con,"SELECT * FROM `results_table` LIMIT 5");
+    //will get the fifth module from the xyz_results table
+    $moduleFive=mysqli_query($con,"SELECT * FROM `xyz_results` LIMIT 5");
     //will return the module name and result
     while($row = mysqli_fetch_row($moduleFive)) {
        $s5 = $row[0];
