@@ -1,5 +1,5 @@
 # Student-Portal
-This is a simple PHP Student Portal with a MySQL Database. I made this as part of a university assignment, so you can login, logout, register, and view your details when successfully registered and/or logged in. For this to function properly you will need a {student} database, with tables for {registration, info, and results}. Here is a simple flow chart to show the layout of the application. 
+This is a simple PHP Student Portal with a MySQL Database. I made this as part of a university assignment, so you can login, logout, register, and view your details when successfully registered and/or logged in. For this to function properly you will need a {student} database, with tables for {registration, info, login history, and results}. Here is a simple flow chart to show the layout of the application. 
 
 ![flow chart of christine coomans student portal](https://user-images.githubusercontent.com/87696858/144178299-498874d1-aa12-4289-bea8-65a024ef30bd.png)
 
